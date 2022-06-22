@@ -1,0 +1,68 @@
+<?php
+include_once('insert.php')
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index file</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="title">Payment Details   
+        </div>
+            <form action="insert.php" method="POST">
+                <script type="text/javascript" src="functions.js"></script>
+                <div class="user-details">
+                    <div class="input">
+                        <span class="details">Name</span>
+                        <input type = "text" placeholder="Enter your Full Name" name="name" required>
+                    </div>
+                    <div class="input">
+                        <span class="details">Phone</span>
+                        <input type = "text" placeholder=" Telephone Number" name="number" required>
+                    </div>
+                    <div class="input">
+                        <span class="details">Address</span>
+                        <textarea id="add" cols="30" rows="10" placeholder="Address" name="address"></textarea>
+                    </div>
+                    <div class="input">
+                        <span class="details">Contry</span>
+                        <input type = "text" placeholder="Contry" name ="contry" required>
+                    </div>
+                </div>
+                <div class="payments">
+                    <div class="input">
+                        <span class="pin">Check In</span>
+                        <input type = "date" name="indate" required>
+                    </div>
+                    <div class="input">
+                        <span class="pout">Check Out</span>
+                        <input type = "date" name = "outdate" required>
+                    </div>
+                    <div class="input">
+                        <span class="status">Payment Status </span>
+                        <input type="radio" name="ps">Yes &nbsp;&nbsp; 
+                        <input type="radio" name="ps">No
+                    </div>
+                    <div class="input">
+                        <span class="pmode">Payment Mode</span>
+                        <select name="Mode " id="pm" name="mode" required>
+                            <option value="card">Card</option>
+                            <option value="cash">Cash</option>
+                            <option value="paypal">Paypal</option>
+                            <option value="cheque">Cheque</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Check" src="main.html">
+                </div>
+            </form>
+    </div>
+</body>
+</html>

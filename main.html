@@ -1,0 +1,40 @@
+<?php
+include_once('insert.php')
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table align="center" border="1px" style="width: 600px; line-height:40px;">
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Phone</th>
+            <th> Address</th>
+            <th> Contry</th>
+            <th> Check In</th>
+            <th> Check Out</th>
+            <th> Total</th>
+        </tr>
+        <?php
+            while($rows=mysql_fetch_assoc($result)){
+        ?>   
+        <tr>
+            <td><?php echo $rows['id']; ?></td>
+            <td><?php echo $rows['name']; ?></td> 
+            <td><?php echo $rows['tele']; ?></td>
+            <td><?php echo $rows['address']; ?></td>
+            <td><?php echo $rows['contry']; ?></td>
+            <td><?php echo $rows['checkin']; ?></td>
+            <td><?php echo $rows['checkout']; ?></td>
+            <td><?php echo $rows['total']; ?></td>
+        </tr>
+</table>
+</body>
+</html>
